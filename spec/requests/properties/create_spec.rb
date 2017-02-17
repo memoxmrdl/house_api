@@ -22,7 +22,7 @@ RSpec.describe 'Properties', type: :request do
         )
       end
 
-      it { expect(response).to have_http_status(201) }
+      it { expect(response).to have_http_status(200) }
       it { expect(response).to match_response_schema(:property, strict: true) }
       it { expect(response).to match_location_header(/\/properties\/\d+$/) }
     end

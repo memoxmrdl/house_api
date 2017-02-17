@@ -15,7 +15,7 @@ class PropertiesController < ApplicationController
     @property = Property.new(property_params)
 
     if @property.save
-      render json: @property, status: :created, location: @property
+      render json: @property, status: :ok, location: @property
     else
       render json: { response: false, message: @property.errors.full_messages.join(', ') }, status: :bad_request
     end
