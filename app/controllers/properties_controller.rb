@@ -21,6 +21,14 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def update
+    if @property.update(property_params)
+      render json: @property, status: :ok, location: @property
+    else
+      render json: { response: false, message: @property.errors.full_messages.join(', ') }, status: :bad_request
+    end
+  end
+
   private
 
   def find_property
