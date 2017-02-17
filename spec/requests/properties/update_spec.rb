@@ -14,7 +14,7 @@ RSpec.describe 'Properties', type: :request do
     context 'with valid params' do
       let!(:property_params) do
         {
-          country: 'es',
+          country: 'mx',
           zipcode: '11111'
         }
       end

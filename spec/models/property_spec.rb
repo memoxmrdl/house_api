@@ -22,4 +22,5 @@ RSpec.describe Property, type: :model do
   it { is_expected.to validate_length_of(:country).is_equal_to(2) }
   it { is_expected.to define_enum_for(:house_type) }
   it { is_expected.to allow_value('99999', '11111').for(:zipcode) }
+  it { is_expected.to validate_inclusion_of(:country).in_array(['mx', 'us', 'ca']) }
 end
