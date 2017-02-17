@@ -1,9 +1,9 @@
 class Property < ApplicationRecord
-  validates :type,
-            :title,
+  validates :title,
             :address,
             :zipcode,
-            :country, presence: true
+            :country,
+            :house_type, presence: true
 
   validates :country, length: { is: 2 }
   validates :notes, length: { maximum: 300 }
@@ -11,5 +11,5 @@ class Property < ApplicationRecord
   validates :address, length: { minimum: 30, maximum: 140 }
   validates :zipcode, numericality: true, format: { with: /\A\d{5}-\d{4}|\A\d{5}\z/ }
 
-  enum type: [:house, :departament]
+  enum house_type: [:house, :departament]
 end
