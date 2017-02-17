@@ -29,6 +29,12 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def destroy
+    @property.destroy
+
+    render json: @property
+  end
+
   private
 
   def find_property
