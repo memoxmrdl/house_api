@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": ["property"],
+  "properties": {
+    "property": {
+      "type": "object",
+      "required": [
+        "id",
+        "house_type",
+        "title",
+        "address",
+        "zipcode",
+        "country",
+        "notes"
+      ],
+      "properties": {
+        "id":               { "type": "integer" },
+        "house_type":       { "type": "string" },
+        "title":            { "type": "string" },
+        "address":          { "type": "string" },
+        "zipcode":          { "type": "string" },
+        "country":          { "type": "string" },
+        "notes":            { "type": "string" }
+      }
+    }
+  }
+}
