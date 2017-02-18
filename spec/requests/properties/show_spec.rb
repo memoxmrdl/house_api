@@ -12,7 +12,7 @@ RSpec.describe 'Properties', type: :request do
   describe 'GET /properties/:id' do
     context 'when property exists' do
       it { expect(response).to have_http_status(200) }
-      it { expect(response).to match_response_schema(:property, strict: true) }
+      it { expect(response).to match_response_schema(:property_attributes, strict: true) }
     end
 
     context 'when property does not exist' do

@@ -7,7 +7,7 @@ class PropertiesController < ApplicationController
   end
 
   def show
-    render json: @property
+    render json: @property, adapter: :attributes
   end
 
   def create
@@ -30,7 +30,7 @@ class PropertiesController < ApplicationController
 
   def destroy
     @property.destroy
-    render json: @property
+    render json: @property, adapter: :attributes
   end
 
   private

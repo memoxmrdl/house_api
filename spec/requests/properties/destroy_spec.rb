@@ -14,7 +14,7 @@ RSpec.describe 'Properties', type: :request do
     context 'when somebody tries to delete a' do
       context 'property exists' do
         it { expect(response).to have_http_status(200) }
-        it { expect(response).to match_response_schema(:property, strict: true) }
+        it { expect(response).to match_response_schema(:property_attributes, strict: true) }
       end
 
       context 'property does not exist' do
