@@ -1,24 +1,29 @@
-# README
+# House - API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technical Specification
+* Rails 5.0.1
+* Ruby 2.4.0
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+Checkout the project
+```
+$ git clone git@github.com:memoxmrdl/house_api.git
+$ cd house_api
+```
 
-* System dependencies
+## Create database
+```
+$ cp config/database.yml.example config/database.yml
+$ rake db:create db:migrate db:seed
+```
 
-* Configuration
+## Run project
+```
+$ rails server
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run tests
+```
+$ rspec .
+```

@@ -1,0 +1,25 @@
+es:
+  activerecord:
+    errors:
+      models:
+        property:
+          attributes:
+            title:
+              blank: 'no debe estar vacío'
+              too_short: 'debe tener longitud mínima de 15 caracteres'
+              too_long: 'debe tener longitud máxima de 45 caracteres'
+            address:
+              blank: 'no debe estar vacío'
+              too_short: 'debe tener longitud mínima de 30 caracteres'
+              too_long: 'debe tener longitud máxima de 140 caracteres'
+            zipcode:
+              blank: 'no debe estar vacío'
+              too_short: 'debe tener una longitud de 5 caracteres'
+              not_a_number: 'debe ser un número válido entre 10000 y 99999.'
+              invalid: 'es invalido'
+            country:
+              blank: 'no debe estar vacío'
+              wrong_length: 'debe tener una longitud exacta de 2 caracteres.'
+              inclusion: 'debe tener alguno de los valores: mx, us, ca'
+            house_type:
+              blank: 'no debe estar vacío'
