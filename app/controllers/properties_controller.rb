@@ -3,7 +3,6 @@ class PropertiesController < ApplicationController
 
   def index
     @properties = Property.all
-
     render json: @properties
   end
 
@@ -15,23 +14,22 @@ class PropertiesController < ApplicationController
     @property = Property.new(property_params)
 
     if @property.save
-      render json: @property, status: :ok, location: @property
+      render_json @property, :ok
     else
-      render json: { response: false, message: @property.errors.full_messages.join(', ') }, status: :bad_request
+      render_error @property, :bad_request
     end
   end
 
   def update
     if @property.update(property_params)
-      render json: @property, status: :ok, location: @property
+      render_json @property, :ok
     else
-      render json: { response: false, message: @property.errors.full_messages.join(', ') }, status: :bad_request
+      render_error @property, :bad_request
     end
   end
 
   def destroy
     @property.destroy
-
     render json: @property
   end
 
@@ -42,6 +40,11 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:title, :address, :zipcode, :country, :notes, :house_type)
+    params.require(:property).permit(:title,
+                                     :notes,
+                                     :address,
+                                     :zipcode,
+                                     :country,
+                                     :house_type)
   end
 end
