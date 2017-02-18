@@ -5,21 +5,21 @@ es:
         property:
           attributes:
             title:
-              blank: 'Title no debe estar vacío'
-              too_short: 'Title debe tener longitud mínima de 15 caracteres'
-              too_long: 'Title debe tener longitud máxima de 45 caracteres'
+              blank: 'no debe estar vacío'
+              too_short: 'debe tener longitud mínima de 15 caracteres'
+              too_long: 'debe tener longitud máxima de 45 caracteres'
             address:
-              blank: 'Address no debe estar vacío'
-              too_short: 'Address debe tener longitud mínima de 30 caracteres'
-              too_long: 'Address debe tener longitud máxima de 140 caracteres'
+              blank: 'no debe estar vacío'
+              too_short: 'debe tener longitud mínima de 30 caracteres'
+              too_long: 'debe tener longitud máxima de 140 caracteres'
             zipcode:
-              blank: 'Zipcode no debe estar vacío'
-              too_short: 'Zipcode debe tener una longitud de 5 caracteres'
-              not_a_number: 'Zipcode debe ser un número válido entre 10000 y 99999.'
-              invalid: 'Zipcode es invalido'
+              blank: 'no debe estar vacío'
+              too_short: 'debe tener una longitud de 5 caracteres'
+              not_a_number: 'debe ser un número válido entre 10000 y 99999.'
+              invalid: 'es invalido'
             country:
-              blank: 'Country no debe estar vacío'
-              wrong_length: 'Country debe tener una longitud exacta de 2 caracteres.'
-              inclusion: 'Country debe tener alguno de los valores: mx, us, ca'
+              blank: 'no debe estar vacío'
+              wrong_length: 'debe tener una longitud exacta de 2 caracteres.'
+              inclusion: 'debe tener alguno de los valores: mx, us, ca'
             house_type:
-              blank: 'House type no debe estar vacío'
+              blank: 'no debe estar vacío'
